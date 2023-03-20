@@ -1,23 +1,9 @@
+/*html, body {margin: 0; height: 100%; overflow: hidden;}*/
 body{
     background-color: black;
 }
 
-@keyframes headerFade {
-    from {
-        white-space: nowrap;
-        overflow: hidden;
-        opacity: 0;
-        font-size: 200vw;
-    }
-    to {
-        white-space: nowrap;
-        overflow: hidden;
-        opacity: 1.0;
-        font-size: 15vw;
-    }
-}
-
-@keyframes mountainFade {
+@keyframes fade {
     from {
         opacity: 0;
     }
@@ -27,14 +13,15 @@ body{
 } 
 
 .nameHeading{
-    background: linear-gradient(0deg,  black, rgb(134, 187, 216), rgb(134, 187, 216), rgb(134, 187, 216), black);
-    border-radius: 1%;
-    font-size: 15vw;
-    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 28px;
+    text-align: left;
     font-family: 'Ariel';
-    animation-name: headerFade;
-    animation-duration: 1.5s;
-    
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    z-index: 1;
 }
 
 .spacer {
@@ -42,36 +29,55 @@ body{
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    animation-name: mountainFade;
-    animation-duration: 5s;
+    animation-name: fade;
+    animation-direction: alternate;
+    animation-duration: 5.0s;
     animation-timing-function: ease-out;
 }
 
-.layer1 {
-    background-image: url('./stacked-peaks-haikei.svg')
+#header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    list-style: none;
+    z-index: 1;
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: black;
+#header li{
+    display: inline-block;
+}
+
+.layer1 {
+    background-image: url('./stacked-peaks-haikei.svg');
+}
+
+.pad {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.padsForRefs {
+    padding-top: 10%;
+}
+
+  .content {
+    color: white;
+  }
+
+  .content {
+    text-align: center;
   }
   
-  .topnav a {
-    display: inline-block;
-    list-style-type: none;
-    color: #f2f2f2;
-    padding: 1%;
-    text-decoration: none;
-    font-size: 2.8vw;
+  .sticky {
+    position: sticky;
+    top: 0;
     
   }
+
+ 
+
   
-  .topnav a:hover {
-    background-color: white;
-    color: black;
-  }
-
-
 
 
 
